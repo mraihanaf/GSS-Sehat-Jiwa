@@ -1,10 +1,14 @@
 import './App.css'
+import Hero from "./components/Hero"
+import Footer from "./components/Footer"
+
 
 function App() {
 
   return (
     <>
-      <h1 className='text-4xl text-center font-bold text-slate-700'>Hello World!, GSS-Sehat-Jiwa.</h1>
+      <Hero></Hero>
+      <Footer></Footer>
     </>
   )
 }
