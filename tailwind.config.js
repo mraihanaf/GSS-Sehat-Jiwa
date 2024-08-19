@@ -21,12 +21,11 @@ module.exports = {
       },
     },
     extend: {
-      
       colors: {
         palettewhite: "#F8FCFB",
         palettedarkgreen: "#79D1C3",
-        palettegreen: "C9FDD7",
-        paletteblue: "6892D5",
+        palettegreen: "#C9FDD7",
+        paletteblue: "#6892D5",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -96,3 +95,4 @@ function addVariablesForColors({ addBase, theme }) {
     ":root": newVars,
   });
 }
+
