@@ -1,13 +1,18 @@
-import './App.css'
-import BlurIn from './components/magicui/blur-in'
-function App() {
+import "./App.css";
+import Hero from "./components/Hero";
+import Explanation from "./components/ExplanationSection";
+import DotPattern from "./components/magicui/dot-pattern";
 
+function App() {
   return (
-    <>
-      <h1 className='text-4xl text-center font-bold text-slate-700'>Hello World!, GSS-Sehat-Jiwa.</h1>
-      <BlurIn word={"Hello World!"}></BlurIn>
-    </>
-  )
+    <div className="relative min-h-screen">
+      <DotPattern className="absolute inset-0 z-0" />
+      <div className="relative z-10">
+        <Hero />
+        <Explanation />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
