@@ -9,25 +9,25 @@ export const TextRevealByWord = ({ text, className }) => {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["start end", "end start"]
   });
   const words = text.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("", className)}>
+    <div ref={targetRef} className={cn("min-h-screen", className)}>
       <div
         className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem] "
+          "sticky top-1/4 mx-auto flex max-w-4xl items-center bg-transparent px-[1rem] py-[5rem] "
         }
       >
         <p
-          ref={targetRef}
           className={
-            "flex flex-wrap p-5 text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3lg lg:p-10 lg:text-4lg xl:text-5lg"
+            "flex flex-wrap p-5 text-2xl font-semibold text-black/20 dark:text-white/20 md:p-8 md:text-3lg lg:p-10 lg:text-4lg xl:text-5lg"
           }
         >
           {words.map((word, i) => {
-            const start = i / words.length;
-            const end = start + 1 / 4 / words.length; // Diubah menjadi 1/4
+            const start = i / (words.length * 2);
+            const end = start + 1 / (words.length * 2);
             return (
               <Word key={i} progress={scrollYProgress} range={[start, end]}>
                 {word}
