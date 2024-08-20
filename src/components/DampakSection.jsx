@@ -7,7 +7,7 @@ function DampakSection() {
     <section className="m-8 md:m-16 mt-56 scroll-mb-56">
       <div className="w-full bg-white/5 rounded-lg shadow-xl pt-28  backdrop-blur-sm pb-28">
         <h1 className="text-center font-bold text-palettedarkgreen text-2xl md:text-3xl mb-28 lg:text-4xl">
-          Dampak Dari <Highlight>Gangguan Mental</Highlight>
+          Dampak Dari <br className="md:hidden"/><Highlight>Gangguan Mental</Highlight>
         </h1>
         <div className="flex-row justify text-justify m-10 text-slate-900">
           <p>
