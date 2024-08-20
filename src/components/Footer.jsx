@@ -1,11 +1,11 @@
 function Footer() {
     const year = new Date().getFullYear();
     return (
-        <footer className="bg-transparent backdrop-blur-md text-black p-8 border-t border-gray-200" id="Contact">
+        <footer className=" backdrop-blur-md bg-transparent text-black p-8 border-t border-white-200" id="Contact">
             <div className="container mx-auto bg-transparent">
         
                 <div className="text-center bg-transparent">
-                    <p className="text-sm bg-transparent text-gray-600">Made with ❤️ by Penta Uno Dev.</p>
+                    <p className="text-md bg-transparent text-gray-600">Made with ❤️ by Penta Uno Dev.</p>
                 </div>
             </div>
         </footer>
