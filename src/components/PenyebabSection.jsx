@@ -40,7 +40,7 @@ function PenyebabSection() {
   return (
     <section className="m-8 md:m-16">
       <div className="w-full bg-white/5 rounded-lg shadow-xl pt-28  backdrop-blur-sm">
-        <h1 className="text-center font-bold text-palettedarkgreen text-3xl mb-10 lg:text-4xl">
+        <h1 className="text-center font-bold text-palettedarkgreen text-2xl md:text-3xl mb-10 lg:text-4xl">
           Beberapa Gejala <Highlight>Gangguan Mental</Highlight>
         </h1>
         <div className="m-10 text-lg font-medium text-slate-900 lg:text-xl ">
