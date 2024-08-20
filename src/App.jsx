@@ -5,8 +5,12 @@ import DotPattern from "./components/magicui/dot-pattern";
 import Navbar from "./components/Navbar";
 import SectionCards from "./components/SectionsCards";
 import Footer from "./components/Footer";
-import PenyebabSection from "./components/PenyebabSection";
+import GejalaSection from "./components/GejalaSection";
 import DampakSection from "./components/DampakSection";
+import MariKitaSection from "./components/MariKitaSection";
+import PenyebabSection from "./components/PenyebabSection";
+import Qoute from "./components/Qoute";
+
 function App() {
   return (
     <div className="relative min-h-screen">
@@ -16,10 +20,12 @@ function App() {
         <Hero />
         <Explanation />
         <SectionCards></SectionCards>
-        <PenyebabSection></PenyebabSection>
+        <GejalaSection></GejalaSection>
         <DampakSection></DampakSection>
+        <PenyebabSection></PenyebabSection>
+        <MariKitaSection></MariKitaSection>
+        <Qoute></Qoute>
         <Footer></Footer>
-        
       </div>
     </div>
   );

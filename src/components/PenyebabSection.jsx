@@ -1,73 +1,40 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
-import Card from "./Card";
 import { Highlight } from "./ui/hero-highlight";
+import React from "react";
+import NumberTicker from "./magicui/number-ticker";
 
 function PenyebabSection() {
-  const contents = [
-    {
-      text: "Anak dengan kondisi jiwa yang kurang baik biasanya selalu merasakan ketakutan yang tidak wajar dan muncul secara tiba tiba. Dapat berupa ketakutan terhadap hal umum ataupun hal yang spesifik.",
-      headingText: "Ketakutan Berlebihan.",
-      id: "1",
-    },
-    {
-      text: "Bervariasi berdasarkan kondisi kesehatan jiwa anak, dapat berupa kecanduan substansi, kesulitan menahan diri, hingga terganggunya pola hidup sehat.",
-      headingText: "Perilaku Negatif.",
-      id: "2",
-    },
-    {
-      text: "Salah satu efek yang paling merugikan dari turunnya kesehatan jiwa anak, hal ini dapat disebabkan karena anak terdistraksi oleh hal lain.",
-      headingText: "Menurunnya Prestasi Akademik.",
-      id: "3",
-    },
-    {
-      text: "Dapat terjadi bila seorang anak memiliki pemikiran self punishing, salah satu contoh yang terkenal adalah barcode, dimana sang anak memotong/ melukai bagian tubuh mereka sendiri kebanyakan tangan. Bahkan ada yang membawa hal ini kepada titik extrim untuk bunuh diri merupakan salah satu pilihan akhir untuk mereka yang putus asa terhadap diri mereka sendiri.",
-      headingText: "Pikiran Menyakiti Diri Sendiri Hingga Bunuh Diri.",
-      id: "4",
-    },
-    {
-      text: "Perubahan emosi anak dapat berubah secara drastis dan perubahan ini bersifat dinamis serta dipengaruhi oleh berbagai faktor, seperti lingkungan, hubungan sosial, dan perkembangan psikologis mereka.",
-      headingText: "Ketidakstabilan Emosi.",
-      id: "5",
-    },
-  ];
-
   return (
-    <section className="m-8 md:m-16">
-      <div className="w-full bg-white/5 rounded-lg shadow-xl pt-28  backdrop-blur-sm">
-        <h1 className="text-center font-bold text-palettedarkgreen text-2xl md:text-3xl mb-10 lg:text-4xl">
-          Beberapa Gejala <br className="md:hidden"/><Highlight>Gangguan Mental</Highlight>
+    <section className="m-8 md:m-16 mt-56 scroll-mb-56" id="penyebab">
+      <div className="w-full bg-white/5 rounded-lg shadow-xl pt-28 backdrop-blur-sm pb-28">
+        <h1 className="text-center font-bold text-palettedarkgreen text-2xl md:text-3xl mb-28 lg:text-4xl">
+          Penyebab <br className="md:hidden"/><Highlight>Gangguan Jiwa</Highlight>
         </h1>
-        <div className="m-10 text-lg font-medium text-slate-900 lg:text-xl ">
-          <h2 className="text-pretty md:text-justify">
-            Turunnya kesehatan mental anak dapat menimbulkan masalah fisik
-            maupun psikis yang tidak sehat, maka dari itu kenali gejalanya
-            sebelum terlambat.
-          </h2>
-        </div>
-        <div className="flex justify-center">
-          <Carousel className="w-max max-w-[15rem] md:max-w-2xl">
-            <CarouselContent>
-              {contents.map((_, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card
-                      className=""
-                      text={_.text}
-                      headingText={_.headingText}
-                    ></Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+        <div className="flex flex-col md:flex-row md:justify-around text-justify m-10 text-slate-900 space-y-10 md:space-y-0 md:space-x-10">
+          <div className="md:w-1/2">
+            <h2 className="text-xl font-semibold mb-4">Faktor Lingkungan</h2>
+            <ul className="list-disc list-inside space-y-4">
+              <li>
+                <strong>Pengaruh negatif dari teman:</strong> Tekanan sebaya merupakan salah satu tantangan yang dialami semua anak dan remaja, di mana mereka sering kali sulit menolak ajakan dari teman-teman meskipun mengetahui bahwa itu adalah hal yang negatif. Perilaku anak zaman sekarang seperti FOMO dan YOLO semakin memperburuk situasi ini.
+              </li>
+              <li>
+                <strong>Kekurangan perhatian dari orang tua:</strong> Parenting adalah keterampilan yang sangat penting untuk dimiliki oleh semua orang tua. Sayangnya, masih banyak yang berpikir bahwa keterampilan ini akan datang dengan sendirinya seperti insting, dan tidak terlalu penting untuk dipelajari. Namun, orang tua adalah suar bagi anak-anak mereka untuk menuntun mereka ke arah yang benar.
+              </li>
+              <li>
+                <strong>Perundungan (bullying):</strong> Pengalaman buruk seperti perundungan, baik secara fisik maupun psikologis, dapat meninggalkan luka emosional yang mendalam dan berkontribusi pada gangguan jiwa.
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-xl font-semibold mb-4">Faktor Biologis & Psikologis</h2>
+            <ul className="list-disc list-inside space-y-4">
+              <li>
+                <strong>Trauma generasi:</strong> Trauma ini dapat diturunkan dari orang tua melalui dua cara, yaitu secara genetik dan kultural. Secara genetik, anak akan lebih rentan terhadap hormon kortisol. Secara kultural, trauma ini biasanya berakar dari pengalaman seperti rasisme atau PTSD dari perang, yang secara tidak sadar membawa sifat negatif kepada anak.
+              </li>
+              <li>
+                <strong>Penyalahgunaan substansi:</strong> Penggunaan psikotropika seperti LSD, psilocybin, atau MDMA dapat menyebabkan gejala psikotik seperti halusinasi, paranoia, atau delusi. Penggunaan jangka panjang bahkan bisa menyebabkan gangguan psikotik kronis seperti skizofrenia, dan memperburuk gangguan kejiwaan lainnya seperti depresi atau bipolar.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
